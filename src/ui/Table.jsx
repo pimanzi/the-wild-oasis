@@ -86,12 +86,13 @@ function Row({ children }) {
 }
 
 function Body({ data, render }) {
-  if (!data) return <Empty>No data available</Empty>;
+  if (data.length === 0) return <Empty>No data available</Empty>;
   return <StyledBody>{data.map(render)}</StyledBody>;
 }
 
 Table.Header = Header;
 Table.Row = Row;
 Table.Body = Body;
+Table.Footer = Footer;
 
 export default Table;
