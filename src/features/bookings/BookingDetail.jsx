@@ -14,9 +14,9 @@ import Button from '../../ui/Button';
 import { useBooking } from './useBooking';
 // import { useDeleteBooking } from './useDeleteBooking';
 import { useMoveBack } from '../../hooks/useMoveBack';
-// import { useCheckout } from 'features/check-in-out/useCheckout';
 import ButtonText from '../../ui/ButtonText';
 import Empty from '../../ui/Empty';
+import useCheckout from '../check-in-out/useCheckout';
 
 const HeadingGroup = styled.div`
   display: flex;
@@ -27,7 +27,7 @@ const HeadingGroup = styled.div`
 function BookingDetail() {
   const { Booking: booking, isLoading } = useBooking();
   // const { mutate: deleteBooking, isLoading: isDeleting } = useDeleteBooking();
-  // const { mutate: checkout, isLoading: isCheckingOut } = useCheckout();
+  const { checkout, isCheckingOut } = useCheckout();
 
   const moveBack = useMoveBack();
   const navigate = useNavigate();
@@ -63,13 +63,13 @@ function BookingDetail() {
           </Button>
         )}
 
-        {/* {status === 'checked-in' && (
+        {status === 'checked-in' && (
           <Button onClick={() => checkout(bookingId)} disabled={isCheckingOut}>
             Check out
           </Button>
         )}
 
-        <Modal>
+        {/* <Modal>
           <Modal.Toggle opens="delete">
             <Button variation="danger">Delete booking</Button>
           </Modal.Toggle>
