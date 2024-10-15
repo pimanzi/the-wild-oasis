@@ -3,7 +3,6 @@ import { getToday } from '../utils/helpers';
 import supabase from './supabase';
 
 export async function getBookings(filter, sort, page) {
-  console.log(filter);
   let query = supabase
     .from('bookings')
     .select(
@@ -121,7 +120,6 @@ export async function updateBooking(id, obj) {
 }
 
 export async function deleteBooking(id) {
-  // REMEMBER RLS POLICIES
   const { data, error } = await supabase.from('bookings').delete().eq('id', id);
 
   if (error) {
