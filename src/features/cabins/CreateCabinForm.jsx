@@ -57,7 +57,7 @@ function CreateCabinForm({ cabinToEdit = {}, onClose }) {
       onSubmit={handleSubmit(onSubmit, onError)}
       type={onClose ? 'modal' : 'regular'}
     >
-      <FormRow label="Cabin name" error={errors?.name?.message}>
+      <FormRow label="Cabin name" error={errors?.name?.message} type="non-auth">
         <Input
           type="text"
           id="name"
@@ -68,7 +68,11 @@ function CreateCabinForm({ cabinToEdit = {}, onClose }) {
         />
       </FormRow>
 
-      <FormRow label="Maximum capacity" error={errors?.maxCapacity?.message}>
+      <FormRow
+        label="Maximum capacity"
+        error={errors?.maxCapacity?.message}
+        type="non-auth"
+      >
         <Input
           type="number"
           id="maxCapacity"
@@ -83,7 +87,11 @@ function CreateCabinForm({ cabinToEdit = {}, onClose }) {
         />
       </FormRow>
 
-      <FormRow label="Regular price" error={errors?.regularPrice?.message}>
+      <FormRow
+        label="Regular price"
+        error={errors?.regularPrice?.message}
+        type="non-auth"
+      >
         <Input
           type="number"
           id="regularPrice"
@@ -98,7 +106,11 @@ function CreateCabinForm({ cabinToEdit = {}, onClose }) {
         />
       </FormRow>
 
-      <FormRow label="Discount" error={errors?.discount?.message}>
+      <FormRow
+        label="Discount"
+        error={errors?.discount?.message}
+        type="non-auth"
+      >
         <Input
           type="number"
           id="discount"
@@ -114,6 +126,7 @@ function CreateCabinForm({ cabinToEdit = {}, onClose }) {
       </FormRow>
 
       <FormRow
+        type="non-auth"
         label="Description for website"
         error={errors?.description?.message}
       >
@@ -128,7 +141,7 @@ function CreateCabinForm({ cabinToEdit = {}, onClose }) {
         />
       </FormRow>
 
-      <FormRow label="Cabin photo">
+      <FormRow label="Cabin photo" type="non-auth">
         <FileInput
           id="image"
           accept="image/*"
@@ -138,7 +151,7 @@ function CreateCabinForm({ cabinToEdit = {}, onClose }) {
         />
       </FormRow>
 
-      <FormRow>
+      <FormRow type="non-auth">
         <Button variation="secondary" type="reset" onClick={() => onClose?.()}>
           Cancel
         </Button>

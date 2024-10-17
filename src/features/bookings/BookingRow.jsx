@@ -146,7 +146,6 @@ function BookingRow({
             resource="booking"
             onConfirm={() => {
               deletebooking(bookingId);
-              navigate('/dashboard');
             }}
             disabled={isDeleting}
           />

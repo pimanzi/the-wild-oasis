@@ -66,8 +66,9 @@ function BookingDetail() {
             <ConfirmDelete
               resource="booking"
               onConfirm={() => {
-                deletebooking(bookingId);
-                navigate('/dashboard');
+                deletebooking(bookingId, {
+                  onSettled: () => navigate(-1),
+                });
               }}
               disabled={isDeleting}
             />

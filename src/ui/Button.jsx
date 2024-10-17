@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 const sizes = {
   small: css`
@@ -17,6 +17,12 @@ const sizes = {
     font-size: 1.6rem;
     padding: 1.2rem 2.4rem;
     font-weight: 500;
+  `,
+  auth: css`
+    font-size: 1.6rem;
+    padding: 1.2rem 2.4rem;
+    font-weight: 700;
+    width: 100%;
   `,
 };
 
@@ -58,8 +64,8 @@ const Button = styled.button`
 `;
 
 Button.defaultProps = {
-  variation: "primary",
-  size: "medium",
+  variation: 'primary',
+  size: 'medium',
 };
 
 export default Button;
