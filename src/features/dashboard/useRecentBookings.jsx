@@ -12,7 +12,7 @@ function useRecentBookings() {
   const dateToFilterFrom = subDays(new Date(), filterDays).toISOString();
 
   const { data: lastBookings, isLoading } = useQuery({
-    queryKey: ['bookings', `last-${filterDays}`],
+    queryKey: ['recent-bookings', `last-${filterDays}`],
     queryFn: () => getBookingsAfterDate(dateToFilterFrom),
   });
 
