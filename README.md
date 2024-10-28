@@ -3,8 +3,8 @@ Wild Oasis is a hotel management app built for staff to seamlessly handle cabin 
 
 ## Live Demo : [the-wilds-oasis](https://the-wilds-oasis.vercel.app/login)
  NB: This app was built to help employees manage the check-ins and checkouts of hotel guests, which means an employee who is given access to this application needs to have credentials to use this application 
- Feel free to use these credentials to log in 
- Email: radirat227@jameagle.com
- password: test123456
+ Feel free to use these credentials to log in   
+ Email: radirat227@jameagle.com  
+ password: test123456  
  
  After successfully logging in you can create a user and the email will be sent to the user to join via the link provided in the email.
